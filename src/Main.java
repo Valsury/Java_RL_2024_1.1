@@ -23,6 +23,7 @@ public class Main {
         System.out.printf("Процент изменения стоимости акций: %.2f%%\n", stock.getChangePercent());
 
         System.out.println("\n");
+
         long[] elapsedTimes = {
                 10000,
                 100000,
