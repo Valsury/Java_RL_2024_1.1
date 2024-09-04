@@ -1,5 +1,4 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         Rectangle rectangle1 = new Rectangle(4, 40);
@@ -22,5 +21,24 @@ public class Main {
         stock.setPreviousClosingPrice(281.50);
         stock.setCurrentPrice(282.87);
         System.out.printf("Процент изменения стоимости акций: %.2f%%\n", stock.getChangePercent());
+
+        System.out.println("\n");
+        long[] elapsedTimes = {
+                10000,
+                100000,
+                1000000,
+                10000000,
+                100000000,
+                1000000000,
+                10000000000L,
+                100000000000L
+        };
+
+        for (long elapsedTime : elapsedTimes) {
+            Date date = new Date(elapsedTime);
+            System.out.println("Elapsed time: " + elapsedTime + " milliseconds");
+            System.out.println("Date: " + date.toString());
+            System.out.println();
+        }
     }
 }
